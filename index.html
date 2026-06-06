@@ -5,20 +5,11 @@
 <!-- html: Elemento raíz que contiene todo el documento HTML; lang define el idioma -->
 
   <meta charset="UTF-8">
-  <!-- meta charset: Define la codificación de caracteres para mostrar tildes y ñ correctamente -->
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- meta viewport: Controla el escalado en dispositivos móviles para diseño responsivo -->
-
   <meta name="description" content="Historia y recursos de Python: el lenguaje más popular del mundo">
-  <!-- meta description: Descripción de la página para motores de búsqueda (SEO) -->
-
   <title>Python · Historia & Recursos</title>
-  <!-- title: Define el texto que aparece en la pestaña del navegador -->
 
   <style>
-    /* style: Permite escribir CSS directamente en el documento HTML para dar estilos visuales */
-
     @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
 
     :root {
@@ -35,7 +26,6 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -47,7 +37,6 @@
       overflow-x: hidden;
     }
 
-    /* ── NOISE OVERLAY ── */
     body::before {
       content: '';
       position: fixed;
@@ -58,9 +47,6 @@
       opacity: 0.6;
     }
 
-    /* ═══════════════════════════════════════
-       HERO
-    ═══════════════════════════════════════ */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -104,10 +90,7 @@
       animation: fadeUp 0.8s 0.25s forwards;
     }
 
-    .hero-title span {
-      color: var(--accent);
-      display: block;
-    }
+    .hero-title span { color: var(--accent); display: block; }
 
     .hero-subtitle {
       margin-top: 2rem;
@@ -152,9 +135,6 @@
       animation: fadeUp 1s 1.1s forwards;
     }
 
-    /* ═══════════════════════════════════════
-       SECCIONES
-    ═══════════════════════════════════════ */
     .section {
       padding: 6rem 8vw;
       position: relative;
@@ -188,9 +168,6 @@
       opacity: 0.6;
     }
 
-    /* ═══════════════════════════════════════
-       TIMELINE
-    ═══════════════════════════════════════ */
     .timeline {
       position: relative;
       padding-left: 2.5rem;
@@ -219,7 +196,6 @@
     .tl-item:nth-child(5) { animation-delay: 0.5s; }
     .tl-item:nth-child(6) { animation-delay: 0.6s; }
     .tl-item:nth-child(7) { animation-delay: 0.7s; }
-    .tl-item:nth-child(8) { animation-delay: 0.8s; }
 
     .tl-dot {
       position: absolute;
@@ -247,14 +223,8 @@
       margin-bottom: 0.5rem;
     }
 
-    .tl-body {
-      color: var(--muted);
-      font-size: 0.93rem;
-    }
+    .tl-body { color: var(--muted); font-size: 0.93rem; }
 
-    /* ═══════════════════════════════════════
-       ZEN GRID
-    ═══════════════════════════════════════ */
     .zen-bg {
       background: var(--surface);
       border-top: 1px solid var(--border);
@@ -287,15 +257,8 @@
       margin-bottom: 0.5rem;
     }
 
-    .zen-text {
-      font-style: italic;
-      color: var(--text);
-      font-size: 0.95rem;
-    }
+    .zen-text { font-style: italic; color: var(--text); font-size: 0.95rem; }
 
-    /* ═══════════════════════════════════════
-       LIBRERÍA CARDS
-    ═══════════════════════════════════════ */
     .lib-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -323,11 +286,7 @@
       transition: transform 0.35s ease;
     }
 
-    .lib-card:hover {
-      border-color: rgba(247,201,72,0.45);
-      transform: translateY(-3px);
-    }
-
+    .lib-card:hover { border-color: rgba(247,201,72,0.45); transform: translateY(-3px); }
     .lib-card:hover::before { transform: scaleX(1); }
 
     .lib-name {
@@ -350,11 +309,7 @@
       margin-bottom: 0.9rem;
     }
 
-    .lib-desc {
-      color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 1.7;
-    }
+    .lib-desc { color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
 
     .lib-tag {
       display: inline-block;
@@ -369,42 +324,17 @@
       padding: 0.2rem 0.7rem;
     }
 
-    /* ═══════════════════════════════════════
-       TABLA RESUMEN
-    ═══════════════════════════════════════ */
     .table-wrap {
       overflow-x: auto;
       margin-top: 2rem;
       border: 1px solid var(--border);
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.92rem;
-    }
-
-    /* table: Crea una tabla para organizar datos en filas y columnas */
-
-    thead {
-      background: var(--surface2);
-    }
-    /* thead: Agrupa las filas del encabezado de la tabla */
-
-    tbody tr {
-      border-bottom: 1px solid rgba(247,201,72,0.08);
-      transition: background 0.2s;
-    }
-    /* tbody: Agrupa las filas del cuerpo principal de la tabla */
-
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    thead { background: var(--surface2); }
+    tbody tr { border-bottom: 1px solid rgba(247,201,72,0.08); transition: background 0.2s; }
     tbody tr:hover { background: var(--surface2); }
-
-    th, td {
-      padding: 0.85rem 1.2rem;
-      text-align: left;
-    }
-    /* th: Celda de encabezado de tabla con texto en negrita por defecto */
-    /* td: Celda de datos normal dentro de la tabla */
+    th, td { padding: 0.85rem 1.2rem; text-align: left; }
 
     th {
       font-family: 'Syne', sans-serif;
@@ -421,9 +351,6 @@
       font-size: 0.85rem;
     }
 
-    /* ═══════════════════════════════════════
-       REFLEXIÓN FINAL
-    ═══════════════════════════════════════ */
     .final-bg {
       background: linear-gradient(135deg, #0f1118 0%, #12141a 50%, #0b0c10 100%);
       border-top: 1px solid var(--border);
@@ -447,12 +374,7 @@
       margin-bottom: -1rem;
     }
 
-    .quote-text {
-      font-style: italic;
-      font-size: 1.15rem;
-      color: var(--text);
-      line-height: 1.9;
-    }
+    .quote-text { font-style: italic; font-size: 1.15rem; color: var(--text); line-height: 1.9; }
 
     .quote-author {
       margin-top: 1.5rem;
@@ -463,9 +385,6 @@
       color: var(--accent);
     }
 
-    /* ═══════════════════════════════════════
-       STAT BAND
-    ═══════════════════════════════════════ */
     .stat-band {
       display: flex;
       flex-wrap: wrap;
@@ -496,8 +415,94 @@
     }
 
     /* ═══════════════════════════════════════
-       FOOTER
+       SECCIÓN VIDEO YOUTUBE
     ═══════════════════════════════════════ */
+    .video-section {
+      padding: 6rem 8vw;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    /* a: Hipervínculo, permite navegar a otra página o recurso al hacer clic */
+    .yt-link {
+      display: inline-block;
+      position: relative;
+      text-decoration: none;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 0 1px var(--border);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 640px;
+      width: 100%;
+    }
+
+    .yt-link:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(247,201,72,0.2), 0 0 0 1px rgba(247,201,72,0.4);
+    }
+
+    /* img: Muestra la miniatura del video como imagen clickeable */
+    .yt-thumbnail {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+
+    /* Overlay con botón play encima de la miniatura */
+    .yt-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+    }
+
+    .yt-link:hover .yt-overlay {
+      background: rgba(0,0,0,0.15);
+    }
+
+    .yt-play-btn {
+      width: 72px;
+      height: 72px;
+      background: #ff0000;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+      box-shadow: 0 4px 24px rgba(255,0,0,0.5);
+    }
+
+    .yt-link:hover .yt-play-btn {
+      transform: scale(1.12);
+      background: #cc0000;
+    }
+
+    .yt-play-btn svg {
+      width: 28px;
+      height: 28px;
+      fill: white;
+      margin-left: 4px;
+    }
+
+    .yt-caption {
+      margin-top: 1.2rem;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .yt-caption span {
+      color: var(--accent2);
+    }
+
     footer {
       padding: 2rem 8vw;
       display: flex;
@@ -506,7 +511,6 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
-    /* footer: Pie de página del documento, contiene info de cierre */
 
     .footer-brand {
       font-family: 'Syne', sans-serif;
@@ -515,14 +519,8 @@
       color: var(--accent);
     }
 
-    .footer-note {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
+    .footer-note { font-size: 0.78rem; color: var(--muted); }
 
-    /* ═══════════════════════════════════════
-       ANIMATIONS
-    ═══════════════════════════════════════ */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(22px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -533,9 +531,6 @@
       to   { opacity: 1; transform: translateX(0); }
     }
 
-    /* ═══════════════════════════════════════
-       NAV
-    ═══════════════════════════════════════ */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -548,7 +543,6 @@
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
-    /* nav: Define la barra de navegación principal del sitio */
 
     .nav-logo {
       font-family: 'Syne', sans-serif;
@@ -558,10 +552,7 @@
       letter-spacing: -0.02em;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
+    .nav-links { display: flex; gap: 2rem; }
 
     .nav-link {
       font-family: 'Syne', sans-serif;
@@ -575,25 +566,15 @@
 
     .nav-link:hover { color: var(--accent); }
 
-    /* ═══════════════════════════════════════
-       RESPONSIVE
-    ═══════════════════════════════════════ */
     @media (max-width: 600px) {
       .nav-links { display: none; }
       .stat-band { gap: 2rem; }
     }
-
   </style>
 
-  <!-- ═══════════════════════════════════
-       NAV
-  ══════════════════════════════════════ -->
   <nav>
-    <!-- nav: Contiene los enlaces de navegación principales -->
     <span class="nav-logo">Python ·</span>
-    <!-- span: Contenedor en línea para aplicar estilos a texto sin romper el flujo -->
     <div class="nav-links">
-      <!-- div: Contenedor de bloque genérico para agrupar elementos y aplicar estilos -->
       <span class="nav-link">Historia</span>
       <span class="nav-link">El Zen</span>
       <span class="nav-link">Librerías</span>
@@ -601,106 +582,76 @@
     </div>
   </nav>
 
-  <!-- ═══════════════════════════════════
-       HERO
-  ══════════════════════════════════════ -->
   <header class="hero">
-    <!-- header: Cabecera semántica del documento o sección principal -->
     <p class="hero-eyebrow">Desde 1989 hasta hoy</p>
-    <!-- p: Párrafo de texto, unidad básica de contenido textual en bloque -->
-
     <h3 class="hero-title">
-      <!-- h3: Encabezado de tercer nivel, jerarquía de títulos en HTML -->
       Historia &amp;
       <span class="hero-title">Recursos</span>
-      <!-- span: Contenedor en línea para fragmentos de texto con estilo propio -->
       <span style="color:var(--accent); font-family:'Syne',sans-serif;">de Python</span>
     </h3>
-
     <p class="hero-subtitle">
       De un proyecto navideño en los Países Bajos al lenguaje más popular del mundo.
       Una travesía por 35 años de evolución, filosofía y ecosistema.
     </p>
-
     <div class="hero-meta">
       <span class="meta-pill">Guido van Rossum · 1989</span>
       <span class="meta-pill">#1 TIOBE 2024</span>
       <span class="meta-pill">+400 000 paquetes en PyPI</span>
     </div>
-
     <p class="scroll-hint">Desplaza para explorar</p>
   </header>
 
-  <!-- ═══════════════════════════════════
-       PARTE 1: HISTORIA
-  ══════════════════════════════════════ -->
   <main>
-    <!-- main: Contenido principal del documento, único y central -->
-
     <section class="section" id="historia">
-      <!-- section: Sección temática del documento con contenido relacionado -->
       <p class="section-label">Parte 01</p>
       <h3 class="section-title">Historia de <span class="accent">Python</span></h3>
       <div class="divider"></div>
-
       <div class="timeline">
-        <!-- Bloque de timeline construido con divs -->
-
         <div class="tl-item">
           <div class="tl-dot"></div>
           <p class="tl-year">Diciembre 1989</p>
           <p class="tl-heading">Orígenes en el CWI</p>
           <p class="tl-body">Guido van Rossum inicia Python durante las vacaciones de Navidad como sucesor de ABC. Quería un lenguaje potente, extensible y con acceso al sistema operativo.</p>
         </div>
-
         <div class="tl-item">
           <div class="tl-dot"></div>
           <p class="tl-year">Febrero 1991</p>
           <p class="tl-heading">Python 0.9.0 — El primer lanzamiento</p>
           <p class="tl-body">Ya incluía herencia múltiple, funciones lambda, map/filter/reduce, manejo de excepciones, tipado dinámico y módulos. Una base sólida desde el día uno.</p>
         </div>
-
         <div class="tl-item">
           <div class="tl-dot"></div>
           <p class="tl-year">1994 — 2010</p>
           <p class="tl-heading">Era Python 1.x y 2.x</p>
           <p class="tl-body">Python 1.0 trajo Tkinter. Python 2.0 añadió recolector de basura y Unicode. Python 2.7 (2010) fue la última versión de la rama 2.x, con soporte extendido hasta enero de 2020.</p>
         </div>
-
         <div class="tl-item">
           <div class="tl-dot"></div>
           <p class="tl-year">Diciembre 2008</p>
           <p class="tl-heading">La Gran Ruptura — Python 3.0</p>
           <p class="tl-body">Versión incompatible con la rama anterior. Print pasó a ser función, la división de enteros retorna float, Unicode por defecto. La transición duró de 2008 a 2018.</p>
         </div>
-
         <div class="tl-item">
           <div class="tl-dot"></div>
           <p class="tl-year">2015 — 2020</p>
           <p class="tl-heading">Era Moderna temprana</p>
           <p class="tl-body">3.5 trajo async/await. 3.6 introdujo f-strings. 3.7 añadió Dataclasses. 3.8 sumó el operador walrus :=. Cada versión pulió la expresividad del lenguaje.</p>
         </div>
-
         <div class="tl-item">
           <div class="tl-dot"></div>
           <p class="tl-year">2021 — 2023</p>
           <p class="tl-heading">Potencia y Velocidad</p>
           <p class="tl-body">3.10 incorporó pattern matching (match/case). 3.11 logró hasta 60 % de mejora en rendimiento. 3.12 mejoró asyncio y los subinterpreters.</p>
         </div>
-
         <div class="tl-item">
           <div class="tl-dot"></div>
           <p class="tl-year">2024</p>
           <p class="tl-heading">Python 3.13 — El fin del GIL</p>
           <p class="tl-body">Eliminación gradual (experimental) del Global Interpreter Lock, abriendo camino a verdadero paralelismo. Un hito histórico en la evolución del lenguaje.</p>
         </div>
-
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════
-         EL NOMBRE
-    ══════════════════════════════════════ -->
     <section class="section" style="background: var(--surface); border-top:1px solid var(--border);">
       <p class="section-label">Curiosidad</p>
       <h3 class="section-title">¿Por qué <span class="accent">"Python"</span>?</h3>
@@ -713,9 +664,6 @@
       </p>
     </section>
 
-    <!-- ═══════════════════════════════════
-         STATS
-    ══════════════════════════════════════ -->
     <div class="stat-band">
       <div class="stat-item">
         <p class="stat-num">35+</p>
@@ -735,9 +683,6 @@
       </div>
     </div>
 
-    <!-- ═══════════════════════════════════
-         EL ZEN DE PYTHON
-    ══════════════════════════════════════ -->
     <section class="section zen-bg" id="zen">
       <p class="section-label">PEP 20 · 2004</p>
       <h3 class="section-title">El Zen de <span class="accent">Python</span></h3>
@@ -746,48 +691,18 @@
         Escrito por Tim Peters. Visible con
         <span style="font-family:'Courier New',monospace; color:var(--accent2); background:var(--surface2); padding:0.1rem 0.5rem; border-radius:3px;">import this</span>
       </p>
-
       <div class="zen-grid">
-        <!-- Principios del Zen presentados en tarjetas -->
-
-        <div class="zen-card">
-          <p class="zen-num">01</p>
-          <p class="zen-text">Bello es mejor que feo.</p>
-        </div>
-        <div class="zen-card">
-          <p class="zen-num">02</p>
-          <p class="zen-text">Explícito es mejor que implícito.</p>
-        </div>
-        <div class="zen-card">
-          <p class="zen-num">03</p>
-          <p class="zen-text">Simple es mejor que complejo.</p>
-        </div>
-        <div class="zen-card">
-          <p class="zen-num">04</p>
-          <p class="zen-text">Complejo es mejor que complicado.</p>
-        </div>
-        <div class="zen-card">
-          <p class="zen-num">05</p>
-          <p class="zen-text">La legibilidad cuenta.</p>
-        </div>
-        <div class="zen-card">
-          <p class="zen-num">06</p>
-          <p class="zen-text">Los errores no deben pasar silenciosamente.</p>
-        </div>
-        <div class="zen-card">
-          <p class="zen-num">07</p>
-          <p class="zen-text">Ahora es mejor que nunca.</p>
-        </div>
-        <div class="zen-card">
-          <p class="zen-num">08</p>
-          <p class="zen-text">Si la implementación es difícil de explicar, es mala idea.</p>
-        </div>
+        <div class="zen-card"><p class="zen-num">01</p><p class="zen-text">Bello es mejor que feo.</p></div>
+        <div class="zen-card"><p class="zen-num">02</p><p class="zen-text">Explícito es mejor que implícito.</p></div>
+        <div class="zen-card"><p class="zen-num">03</p><p class="zen-text">Simple es mejor que complejo.</p></div>
+        <div class="zen-card"><p class="zen-num">04</p><p class="zen-text">Complejo es mejor que complicado.</p></div>
+        <div class="zen-card"><p class="zen-num">05</p><p class="zen-text">La legibilidad cuenta.</p></div>
+        <div class="zen-card"><p class="zen-num">06</p><p class="zen-text">Los errores no deben pasar silenciosamente.</p></div>
+        <div class="zen-card"><p class="zen-num">07</p><p class="zen-text">Ahora es mejor que nunca.</p></div>
+        <div class="zen-card"><p class="zen-num">08</p><p class="zen-text">Si la implementación es difícil de explicar, es mala idea.</p></div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════
-         LIBRERÍAS
-    ══════════════════════════════════════ -->
     <section class="section" id="librerias">
       <p class="section-label">Parte 02</p>
       <h3 class="section-title">Recursos del <span class="accent">Ecosistema</span></h3>
@@ -795,193 +710,116 @@
       <p style="color:var(--muted); max-width:560px; margin-bottom:0.5rem;">
         Doce librerías esenciales que demuestran la versatilidad de Python, desde procesamiento de imágenes hasta inteligencia artificial y redes.
       </p>
-
       <div class="lib-grid">
-
         <article class="lib-card">
-          <!-- article: Contenido independiente y autocontenido, como una tarjeta de librería -->
           <p class="lib-name">Pillow</p>
           <span class="lib-install">pip install Pillow</span>
           <p class="lib-desc">Fork moderno de PIL. Redimensiona, aplica filtros, agrega marcas de agua, convierte formatos y preprocesa imágenes para proyectos de IA.</p>
           <span class="lib-tag">Imágenes</span>
         </article>
-
         <article class="lib-card">
           <p class="lib-name">Scrapy</p>
           <span class="lib-install">pip install Scrapy</span>
           <p class="lib-desc">Framework profesional para web scraping a gran escala. Maneja concurrencia, seguimiento de enlaces y exportación a JSON, CSV y bases de datos.</p>
           <span class="lib-tag">Web Scraping</span>
         </article>
-
         <article class="lib-card">
           <p class="lib-name">NumPy</p>
           <span class="lib-install">pip install numpy</span>
           <p class="lib-desc">Computación numérica de alto rendimiento con arrays multidimensionales. Base de Pandas, Scikit-learn, TensorFlow y gran parte del ecosistema científico.</p>
           <span class="lib-tag">Ciencia de Datos</span>
         </article>
-
         <article class="lib-card">
           <p class="lib-name">Pandas</p>
           <span class="lib-install">pip install pandas</span>
           <p class="lib-desc">Análisis y manipulación de datos tabulares con DataFrames. Lectura, limpieza, agrupación, fusión y análisis como Excel, pero a escala masiva.</p>
           <span class="lib-tag">Análisis de Datos</span>
         </article>
-
         <article class="lib-card">
           <p class="lib-name">Scapy</p>
           <span class="lib-install">pip install scapy</span>
           <p class="lib-desc">Manipulación de paquetes de red. Permite crear, enviar, capturar y analizar paquetes (ping, escaneo de puertos, ARP spoofing, fuzzing).</p>
           <span class="lib-tag">Redes / Seguridad</span>
         </article>
-
         <article class="lib-card">
           <p class="lib-name">Matplotlib</p>
           <span class="lib-install">pip install matplotlib</span>
           <p class="lib-desc">Visualización de datos: líneas, barras, histogramas, gráficos 3D y más. Es la base de Seaborn y otras librerías de visualización avanzada.</p>
           <span class="lib-tag">Visualización</span>
         </article>
-
         <article class="lib-card">
           <p class="lib-name">Kivy</p>
           <span class="lib-install">pip install kivy</span>
           <p class="lib-desc">Framework para apps móviles y multiplataforma (Android, iOS, Windows, Linux). Soporta multitáctil y renderizado con OpenGL.</p>
           <span class="lib-tag">Apps Móviles</span>
         </article>
-
         <article class="lib-card">
           <p class="lib-name">NLTK</p>
           <span class="lib-install">pip install nltk</span>
           <p class="lib-desc">Procesamiento de Lenguaje Natural: tokenización, stemming, lematización, análisis de sentimientos y etiquetado gramatical.</p>
           <span class="lib-tag">NLP</span>
         </article>
-
         <article class="lib-card">
           <p class="lib-name">Keras</p>
           <span class="lib-install">pip install keras</span>
           <p class="lib-desc">API de alto nivel para Deep Learning sobre TensorFlow. Fácil de usar para redes neuronales, visión por computadora, NLP y series temporales.</p>
           <span class="lib-tag">Deep Learning</span>
         </article>
-
         <article class="lib-card">
           <p class="lib-name">SQLAlchemy</p>
           <span class="lib-install">pip install sqlalchemy</span>
           <p class="lib-desc">ORM potente para bases de datos. Permite trabajar con objetos Python en lugar de SQL directo y soporta múltiples motores de BD.</p>
           <span class="lib-tag">Bases de Datos</span>
         </article>
-
         <article class="lib-card">
           <p class="lib-name">Django</p>
           <span class="lib-install">pip install django</span>
           <p class="lib-desc">Framework web "baterías incluidas". ORM, admin automático, autenticación, templates y seguridad. Usado por Instagram, Pinterest y más.</p>
           <span class="lib-tag">Web Framework</span>
         </article>
-
         <article class="lib-card">
           <p class="lib-name">Twisted</p>
           <span class="lib-install">pip install twisted</span>
           <p class="lib-desc">Framework para programación asíncrona y en red. Ideal para servidores de alta concurrencia como chats, juegos y streaming con un solo hilo.</p>
           <span class="lib-tag">Async / Redes</span>
         </article>
-
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════
-         TABLA RESUMEN
-    ══════════════════════════════════════ -->
     <section class="section" style="background: var(--surface); border-top:1px solid var(--border);" id="tabla">
       <p class="section-label">Parte 03</p>
       <h3 class="section-title">Tabla <span class="accent">Resumen</span></h3>
       <div class="divider"></div>
-
       <div class="table-wrap">
         <table>
-          <!-- table: Elemento raíz de una tabla HTML para datos estructurados en filas y columnas -->
           <thead>
-            <!-- thead: Sección de encabezados de la tabla, normalmente con los títulos de columnas -->
             <tr>
-              <!-- tr: Fila de la tabla (table row), contiene celdas th o td -->
               <th>Librería</th>
-              <!-- th: Celda de encabezado (table header), texto en negrita y centrado por defecto -->
               <th>Instalación</th>
               <th>Uso Principal</th>
             </tr>
           </thead>
           <tbody>
-            <!-- tbody: Cuerpo principal de la tabla, contiene las filas de datos -->
-            <tr>
-              <td>Pillow</td>
-              <!-- td: Celda de datos (table data), contiene el contenido de cada celda -->
-              <td>pip install Pillow</td>
-              <td>Editar y procesar imágenes</td>
-            </tr>
-            <tr>
-              <td>Scrapy</td>
-              <td>pip install Scrapy</td>
-              <td>Extracción masiva de datos web</td>
-            </tr>
-            <tr>
-              <td>NumPy</td>
-              <td>pip install numpy</td>
-              <td>Computación numérica y arrays</td>
-            </tr>
-            <tr>
-              <td>Pandas</td>
-              <td>pip install pandas</td>
-              <td>Análisis y manipulación de datos</td>
-            </tr>
-            <tr>
-              <td>Scapy</td>
-              <td>pip install scapy</td>
-              <td>Manipulación de paquetes de red</td>
-            </tr>
-            <tr>
-              <td>Matplotlib</td>
-              <td>pip install matplotlib</td>
-              <td>Visualización y gráficos</td>
-            </tr>
-            <tr>
-              <td>Kivy</td>
-              <td>pip install kivy</td>
-              <td>Apps móviles multiplataforma</td>
-            </tr>
-            <tr>
-              <td>NLTK</td>
-              <td>pip install nltk</td>
-              <td>Procesamiento de lenguaje natural</td>
-            </tr>
-            <tr>
-              <td>Keras</td>
-              <td>pip install keras</td>
-              <td>Deep Learning y redes neuronales</td>
-            </tr>
-            <tr>
-              <td>SQLAlchemy</td>
-              <td>pip install sqlalchemy</td>
-              <td>ORM para bases de datos</td>
-            </tr>
-            <tr>
-              <td>Django</td>
-              <td>pip install django</td>
-              <td>Framework web completo</td>
-            </tr>
-            <tr>
-              <td>Twisted</td>
-              <td>pip install twisted</td>
-              <td>Programación asíncrona y redes</td>
-            </tr>
+            <tr><td>Pillow</td><td>pip install Pillow</td><td>Editar y procesar imágenes</td></tr>
+            <tr><td>Scrapy</td><td>pip install Scrapy</td><td>Extracción masiva de datos web</td></tr>
+            <tr><td>NumPy</td><td>pip install numpy</td><td>Computación numérica y arrays</td></tr>
+            <tr><td>Pandas</td><td>pip install pandas</td><td>Análisis y manipulación de datos</td></tr>
+            <tr><td>Scapy</td><td>pip install scapy</td><td>Manipulación de paquetes de red</td></tr>
+            <tr><td>Matplotlib</td><td>pip install matplotlib</td><td>Visualización y gráficos</td></tr>
+            <tr><td>Kivy</td><td>pip install kivy</td><td>Apps móviles multiplataforma</td></tr>
+            <tr><td>NLTK</td><td>pip install nltk</td><td>Procesamiento de lenguaje natural</td></tr>
+            <tr><td>Keras</td><td>pip install keras</td><td>Deep Learning y redes neuronales</td></tr>
+            <tr><td>SQLAlchemy</td><td>pip install sqlalchemy</td><td>ORM para bases de datos</td></tr>
+            <tr><td>Django</td><td>pip install django</td><td>Framework web completo</td></tr>
+            <tr><td>Twisted</td><td>pip install twisted</td><td>Programación asíncrona y redes</td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════
-         REFLEXIÓN FINAL
-    ══════════════════════════════════════ -->
     <section class="section final-bg" id="reflexion">
       <div class="quote-block">
         <span class="quote-mark">"</span>
-        <!-- span: Contenedor en línea para aplicar estilos decorativos a un carácter -->
         <p class="quote-text">
           Python ha evolucionado desde un proyecto personal de Guido van Rossum en 1989
           hasta convertirse en el lenguaje más versátil y popular de la actualidad.
@@ -991,7 +829,6 @@
         </p>
         <p class="quote-author">— Reflexión Final</p>
       </div>
-
       <div style="text-align:center; margin-top:1rem;">
         <p style="color:var(--muted); font-size:0.88rem; font-style:italic;">
           Empresas que confían en Python:
@@ -1000,14 +837,54 @@
       </div>
     </section>
 
-  </main>
-  <!-- /main -->
+    <!-- ═══════════════════════════════════
+         VIDEO DE YOUTUBE
+         - <a>: hipervínculo que abre el video en YouTube al hacer clic
+         - href: atributo que contiene la URL de destino
+         - target="_blank": abre el enlace en una pestaña nueva
+         - <img>: muestra la miniatura del video obtenida de img.youtube.com
+    ══════════════════════════════════════ -->
+    <section class="video-section" id="video">
+      <p class="section-label">Video recomendado</p>
+      <h3 class="section-title" style="text-align:center;">Míralo en <span class="accent">YouTube</span></h3>
+      <div class="divider" style="margin: 0 auto 2.5rem;"></div>
 
-  <!-- ═══════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════ -->
+      <!-- a: Hipervínculo — al hacer clic lleva al video en YouTube -->
+      <!-- href: define a dónde va el enlace -->
+      <!-- target="_blank": abre en pestaña nueva -->
+      <!-- rel="noopener": seguridad al abrir en pestaña nueva -->
+      <a
+        class="yt-link"
+        href="https://www.youtube.com/watch?v=Rv910T1BJUw"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <!-- img: muestra la miniatura del video -->
+        <!-- src: URL de la miniatura automática que provee YouTube para cada video -->
+        <!-- alt: texto alternativo si la imagen no carga (accesibilidad) -->
+        <img
+          class="yt-thumbnail"
+          src="https://img.youtube.com/vi/Rv910T1BJUw/maxresdefault.jpg"
+          alt="Miniatura del video de Python en YouTube"
+        >
+
+        <!-- Overlay con ícono de play -->
+        <div class="yt-overlay">
+          <div class="yt-play-btn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Leyenda debajo de la miniatura -->
+      <p class="yt-caption">Haz clic para ver el video · <span>YouTube</span></p>
+    </section>
+
+  </main>
+
   <footer>
-    <!-- footer: Pie de página del documento con información de cierre -->
     <span class="footer-brand">Python ·</span>
     <p class="footer-note">Historia &amp; Recursos · 1989 – 2024 · Guido van Rossum &amp; la comunidad</p>
   </footer>
